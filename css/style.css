@@ -1,0 +1,215 @@
+/*
+# = id
+. = class
+padding = é o espaço entre o conteudo e a borda
+margin = é o espaço entre a borda e o elemento seguinte
+display = é o tipo de display
+justify-content = é o alinhamento horizontal
+align-items = é o alinhamento vertical
+min-height = é a altura mínima
+background-color = é a cor de fundo
+text-align = é o alinhamento do texto
+width = é a largura
+height = é a altura
+border-radius = é o raio da borda para deixa la arredondada
+box-shadow = é a sombra da caixa
+box-sizing = é o tamanho da caixa
+font-family = é a fonte
+font-size = tamanho da letra
+color = cor da letra
+border = é a borda do elemento
+background-image = imagem de fundo
+background-size = tamanho da imagem de fundo
+transition = é a transição de uma cor para outra
+cursor = cursor do rato
+outline = contorno
+background-position = posição da imagem de fundo
+transform = é a transformação do elemento
+line-height = é a altura da linha
+font-weight = é o peso da fonte
+position = é a posição do elemento
+*/
+
+/* Aplicar a todos os elementos */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(178, 179, 180);
+}
+
+/* Titulo do quiz */
+h1 { 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #1d1d1d;
+    margin-bottom: 35px;
+}
+
+/* DIv do quiz */
+.quiz-container {
+    text-align: center;
+    width: 500px;
+    height: 220px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Boteos das respostas */
+.respostas {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #3498db, #2980b9);
+    background-size: 200% auto;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 5px;
+}
+
+/* Animacao de passar o rato */
+.respostas:hover {
+    background-position: right center;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+    background-image: linear-gradient(to right, #3498db, #18c01e);
+}
+
+/* Animacao ao clicar */
+.respostas:active {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0px);
+}
+
+/* Botao de proxima pergunta */
+button#prox {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 50px; 
+    /*float: right;*/
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #3498db, #2980b9);
+    background-size: 200% auto;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Animacao de passar o rato */
+#prox:hover {
+    background-position: right center;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+    background-image: linear-gradient(to right, #3498db, #262626);
+}
+
+/* Animacao ao clicar */
+#prox:active {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0px);
+}
+
+/* Textos do jogador */
+#pontos, #erros, #temporizador {
+    font-size: large;
+    font-weight: bold;
+    color:#2980b9;
+    margin: 10px;
+}
+
+/* Numero de erros e pontos */
+#pontos span, #erros span, #temporizador span {
+    color: #262626;
+}
+
+p#pergunta {
+    font-size: 20px;
+    font-weight: bold;
+    color: #262626;
+    margin-top: 35px;
+    line-height: 1.2;
+}
+
+/* Div de comeco esconder */
+p#pontos, p#erros, p#pergunta, button#prox, button.respostas, p#temporizador {
+    display: none;
+}
+
+label {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input#nome {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    color: #262626;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    outline: none;
+    margin-bottom: 5px;
+}
+
+button#comecar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #3498db, #2980b9);
+    background-size: 200% auto;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+button#comecar:hover {
+    background-position: right center;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+    background-image: linear-gradient(to right, #3498db, #18c01e);
+}
+
+button#comecar:active {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0px);
+}
+/* -- // -- */
+
+.selecionada {
+    margin: 0 auto;
+}
+
+.recomecar {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-image: linear-gradient(to right, #3498db, #2980b9);
+    border: none;
+    border-radius: 5px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz da Sala</title> 
+    <link href='./css/style.css' rel='stylesheet' type='text/css'> <!-- Link para o css -->
+    <link rel="shortcut icon" type="x-icon" href="./imgs/logo.jpg"> <!-- Icone da página -->
+</head>
+<body>
+    <div class="quiz-container"> <!-- Div para o quiz -->
+        <h1>Quiz da Sala</h1>
+        <label class="comecar" for="nome">Nome:</label>
+        <input class="comecar" type="text" id="nome" placeholder="Qual é o nome do jogador?">
+        <button onclick="comecarQuiz()" class="comecar" id="comecar">Começar</button> 
+
+        <p id="pontos">Pontuação: <span id="p-num">0</span></p>
+        <p id="erros">Erros: <span id="e-num">0</span></p>
+        <p id="temporizador">Tempo: <span id="t-num">0</span></p>
+        <p id="pergunta"></p> 
+        <div id="respostas"> <!-- Div para as respostas -->
+            <button id="res1" class="respostas">A</button>
+            <button id="res2" class="respostas">B</button>
+            <button id="res3" class="respostas">C</button>
+            <button id="res4" class="respostas">D</button>
+        </div>
+        <button id="prox">Próxima</button> <!-- Botão para a próxima pergunta -->
+    </div>
+</body>
+<script src="./js/script.js"></script> <!-- Link para o js -->
+</html>
