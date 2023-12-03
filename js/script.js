@@ -315,6 +315,9 @@ topJogadoresPontos = () => {
   
 antiDuplicacao = (nick) => {
   let jogadores = JSON.parse(localStorage.getItem('jogadores'));
+  if (jogadores == null) {
+    return false;
+  }
   if (jogadores[nick] != undefined) {
     return true;
   }
