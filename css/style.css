@@ -212,4 +212,5 @@ button#comecar:active {
     background-image: linear-gradient(to right, #3498db, #2980b9);
     border: none;
     border-radius: 5px;
+    color: #fff;
 }
